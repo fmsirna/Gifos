@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFOS</title>
+    <link rel="icon" type="image/svg+xml" href="/images/logo-desktop.svg" />  <!-- review-->
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
+  
+</head>
+
+<body>
+    <header>
+        <div class="linea"></div>
+        <nav id="navbar">
+            <a class="d-logo" href="index.html">
+                <img src="images/logo-modo-noc.svg" alt="Logo-GIFOS" class="logo" id="logo" />
+                <h2>GIFOS</h2>
+            </a>
+            <div class="menu">
+                <div id="menu-burguer" class="menu-burger">
+                    <span class="layer"></span>
+                    <span class="layer"></span>
+                    <span class="layer"></span>
+                </div>
+                <ul id="ul-menu" class="menuUl">
+                    <li id="liModoMocturno"><a href="#">Modo <span id="sp-tema">nocturno</span></a>
+                            <p class="linea-ul"></p>
+                        </li>
+                    <li><a href="favoritos.html">Favoritos</a>
+                        <p class="linea-ul"></p>
+                    </li>
+                    <li><a href="misgifos.html">Mis GIFOS</a>
+                        <p class="linea-ul"></p>
+                    </li>
+                    <li class="liCrearGifos">
+                        <a href="creargifos.html"><img src="images/button-crear-gifo.svg" alt="Icon-Favoritos" /></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="main-body">
+            <h1>Inspírate, busca, guarda, y crea los mejores <span class="gifos">GIFOS</span></h1>
+            <img src="./images/ilustra_header.svg" alt="Banner-main-body-GIFOS" class="logo" />
+            <div class="d-busqueda">
+                <div class="d-input">
+                    <img id="img-lupa" src="images/icon-search-gris.svg" alt="icono-busqueda" class="hidden">
+                    <input id="in-busqueda" type="text" placeholder="Busca GIFOS y más">
+                    <button id="btn-buscar"><img src="images/icon-search.svg" class="input_img" id="lupa-busqueda"
+                            alt="icono-busqueda"></button>
+                    <button id="btn-buscar"><img src="images/close.svg" class="input_img" id="cerrar-busqueda"
+                            alt="icono-busqueda"></button>
+                </div>
+                <ul id="lista-busqueda" class="hidden">
+                </ul>
+            </div>
+            <article>
+                <h3>Trending:</h3>
+                <ul id="lista-treding" class="lista-treding">
+                    <li>Reactions</li>
+                    <li>Entertainment</li>
+                    <li>Sports</li>
+                    <li>Stickers</li>
+                </ul>
+            </article>
+        </section>
+        <section class="resultados">
+            <div class="linea"></div>
+            <h2 id="titulo-resultados" class="hidden">Resultados</h2>
+            <div id="resultados-gifs" class="resultados-gifs hidden">
+            </div>
+            <button id="btn-vermas" class="hidden">VER MAS</button>
+        </section>
+        <section class="trending">
+            <h2>Trending GIFOS</h2>
+            <p>Mira los últimos GIFOS de nuestra comunidad.</p>
+
+
+
+
+        </section>
+        <section id="gif-max" class="maximizado hidden">
+        </section>
+    </main>
+    <footer class="d-footer">
+        <p>Compartir en:</p>
+        <div class="space">
+            <div class="container-icons">
+                <a target="_blank" href="http://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                <a target="_blank" href="http://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                <a target="_blank" href="http://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            </div>
+            <h6>© GIFOS 2020 All Rights Reserved.</h6>
+        </div>
+        <div class="linea"></div>
+    </footer>
+
+    <script src="script/index.js"></script>
+ 
+</body>
+
+</html>
