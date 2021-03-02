@@ -1,9 +1,9 @@
 
-cargarTrendingSugerencias();  
+loadTrendingTopics();  
 /*_____________________LOAD TRENDING SLIDE_____________________*/
 
 //Load 5 trending topics to select
-async function cargarTrendingSugerencias() {    
+async function loadTrendingTopics() {    
     let data = await fetch(`https://api.giphy.com/v1/trending/searches?api_key=${APIkey}&limit=5&rating=g`);
     let trendingSug = await data.json()
     if (trendingSug.data.length > 0) {
