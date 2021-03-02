@@ -171,3 +171,47 @@ async function maximizeGif(idGif) {
         });
     }
 };
+
+
+/*_____________________ maximize button (MY GIFS) (changed delete button)_____________________*/
+async function maximizeGifMyGifs(idGif) {
+    if (!!idGif) {        
+        let data = await fetch(`https://api.giphy.com/v1/gifs/${idGif}?api_key=${APIkey}`);
+        let gif = await data.json();
+        let contenedor_maximizado = document.getElementById('gif-max');
+        contenedor_maximizado.style.display = 'flex';        
+                      
+        contenedor_maximizado.innerHTML =
+            `<button id="btnmax-close" class="close-button">
+                    <img src="images/close.svg" alt="icono-busqueda">
+             </button>
+             <img srcset="${gif.data.images.downsized_large.url}"
+                    alt="${gif.data.id}" id="img-maximizado" class="img-maximizado">
+             <article>
+                   <div>
+                       <p>${gif.data.username}</p>
+                       <p class="titulo">${gif.data.title}</p>
+                   </div>
+                   <div class="maximizado-buttons">
+                       <button id="btnmax-remove"  class="max-button">
+                           <img src="./images/icon-trash-hover.svg" id="img" alt="icono-busqueda">
+                       </button>
+                       <button id="btnmax-download"  class="max-button"">
+                           <img src="images/icon-download.svg" alt="icono-busqueda">
+                       </button>
+                   </div>
+             </article>`;
+        
+        contenedor_maximizado.querySelector('#btnmax-remove').addEventListener('click', (e) => {           
+            removeMyGif(gif.data.id);     
+            loadMyGifs()
+            contenedor_maximizado.style.display = 'none';       
+        });
+        contenedor_maximizado.querySelector('#btnmax-download').addEventListener('click', () => {
+            downloadGif(gif.data.images.original.url);
+        });
+        contenedor_maximizado.querySelector('#btnmax-close').addEventListener('click', () => {
+            contenedor_maximizado.style.display = 'none';
+        });
+    }
+};

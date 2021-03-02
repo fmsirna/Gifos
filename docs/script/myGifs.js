@@ -37,12 +37,12 @@ async function loadMyGifs() {
                     downloadGif(gifs.data[i].images.original.url);
                 });
                 div.querySelector('#myGif_btn-max').addEventListener('click', () => {
-                    maximizeGif(gifs.data[i].id);
+                    maximizeGifMyGifs(gifs.data[i].id);
                 });          
                 //to maximize on click when width <750
                 div.addEventListener('click', () => {
                     if (maxWidth.matches){
-                        maximizeGif(gifs.data[i].id);
+                        maximizeGifMyGifs(gifs.data[i].id);
                     }
                 })   
                 img.srcset = `${gifs.data[i].images.downsized_large.url}`;
