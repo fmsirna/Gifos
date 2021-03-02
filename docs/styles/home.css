@@ -150,7 +150,7 @@ header .linea {
   padding-bottom: 14px;
 }
 
-.liCrearGifos {
+.liCrearGifos a img{
   display: none;
 }
 
@@ -209,10 +209,15 @@ header .linea {
    .home_menuUl li .linea-ul {
     display: none;
   }
-  .liCrearGifos {
-    display: block;    
+  .liCrearGifos {     
     height: 54px;
-    width: 54px;    
+    width: 54px;        
+  }
+  .liCrearGifos a img {
+    display: block;           
+  }
+  .liCrearGifos a p {
+    display: none;           
   }
   .liCrearGifos a:hover {
     border-bottom: none;

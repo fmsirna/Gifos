@@ -288,3 +288,47 @@
       width: 488px;       
      }
   }
+  @media (max-width: 600px) {
+    
+      .div-box {      
+        width: 320px;
+        height: 250px;
+        position: relative;
+      }
+      video {       
+        width: 310px;
+        height: 230px;
+      }
+      .gif-recorded{        
+        width: 310px;
+        height: 230px;
+      }
+      .div-uploadedGif{
+        width: 310px;
+        height:230px;
+      }
+      .div-opcgenerales {    
+      width: 85vw;     
+      justify-content: space-around;  
+     }
+     .div-descripcion { 
+      width:230px;    
+    }
+    .div-descripcion h2 {
+      font-size: 18px;     
+      line-height: 26px;
+    }    
+     .div-descripcion p {      
+      line-height: 19px;
+      font-size: 12px;     
+    }     
+    #btn-repeat{
+      font-size: 14px;  
+    }
+    .div-borders{
+      display:none;
+    }
+    .step{
+      margin: 0 3px 0 8px;
+    }
+  }
