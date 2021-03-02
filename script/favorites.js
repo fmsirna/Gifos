@@ -5,10 +5,10 @@ loadFavorites();
 
 /*_____________________LOAD FAVORITES GIFS FROM LOCAL STORAGE_____________________*/
 async function loadFavorites() {
-    favorite_list = GetLocalStorageGifs()
-    ccontainer_fav.innerHTML = "";
+    favorite_list = getLocalStorageGifs()
+    container_fav.innerHTML = "";
     if (favorite_list.length > 0) {      
-        let data = await fetch(`https://api.giphy.com/v1/gifs?ids=${favorite_list.toString()}&api_key=${APIkey}`);
+        let data = await fetch(`https://api.giphy.com/v1/gifs?ids=${favorite_list.join(',')}&api_key=${APIkey}`);
         let gifsFav  = await data.json()
         if (gifsFav.data.length > 0) {
             for (let i = 0; i < gifsFav.data.length; i++) {
@@ -40,10 +40,7 @@ async function loadFavorites() {
                 });
                 div.querySelector('#btn-max').addEventListener('click', () => {
                     maximizeGif(gifsFav.data[i].id);
-                });
-                div.addEventListener('touchstart', () => {
-                    maximizeGif(gifsFav.data[i].id);
-                })           
+                });          
                 //to maximize on click when width <750
                 div.addEventListener('click', () => {
                     if (maxWidth.matches){
@@ -53,13 +50,13 @@ async function loadFavorites() {
                 img.srcset = `${gifsFav.data[i].images.downsized_large.url}`;
                 img.alt = `${gifsFav.data[i].id}`;
                 div.appendChild(img);
-                ccontainer_fav.appendChild(div);
-                ccontainer_fav.classList.remove('hidden');
+                container_fav.appendChild(div);
+                container_fav.classList.remove('hidden');
                 contenedor_emptyFav.classList.add('hidden');
             }
         }        
     } else {
-        ccontainer_fav.classList.add('hidden');
+        container_fav.classList.add('hidden');
         contenedor_emptyFav.classList.remove('hidden');
     }
 }

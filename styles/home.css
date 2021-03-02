@@ -59,7 +59,7 @@ header .linea {
 }
 
 
-#navbar {
+.home_navbar {
   display: flex;
   justify-content: space-between;
   height: 100px;
@@ -69,16 +69,16 @@ header .linea {
   position: relative;
   width: 100%;
 }
-.d-logo{
+.home_logo{
   margin-left: 20px;
   padding-right: 40px;
 }
-.d-logo img {
+.home_logo img {
   height: 49px;
   width: 56px; 
 }
 
-.d-logo h2 {
+.home_logo h2 {
   position: absolute;
   z-index: -1;
   top: 53px;
@@ -91,7 +91,7 @@ header .linea {
   line-height: 0;
 }
 
-.menuUl {
+.home_menuUl {
   width: 100%;
   position: absolute;
   top: 100px;
@@ -102,10 +102,9 @@ header .linea {
   list-style: none;
   display: none;
   flex-direction: column;
-  align-items: center;
-  
+  align-items: center;  
 }
-.menu{
+.home_menu{
   cursor:pointer;
 }
 .menudesplegado {
@@ -113,34 +112,34 @@ header .linea {
   display: flex;
 }
 
-.menuUl li {
+.home_menuUl li {
   font-size: 15px;
   font-weight: 600;  
   position: relative;
 }
 
-.firstli{
+.home_darkMode{
   margin-top:45px;
 }
-.menuUl li a {
+.home_menuUl li a {
   text-align: center;
   position: relative;
   text-decoration: none;
   color: white;
   display: block;
-  cursor: pointer;
+  cursor: pointer;  
 }
 
- .menuUl li a:hover,.menuUl li span:hover {
+ .home_menuUl li a:hover,.home_menuUl li span:hover {
   text-decoration: underline;  
   text-decoration-color: var(--turquesa);
 }
 
- .menuUl li a:active {
+ .home_menuUl li a:active {
   color: var(--linea);
 }
 
-.menuUl li .linea-ul {
+.home_menuUl li .linea-ul {
   border: 0;
   border-top: 0.1px solid white;
   width: 41px;
@@ -155,7 +154,7 @@ header .linea {
   display: none;
 }
 
- .menu .layer {
+.home_layer {
   margin-right: 26px;
   display: block;
   width: 27px;
@@ -170,26 +169,26 @@ header .linea {
 
 
 @media (min-width: 769px) {
- .menu .menu-burger {
+ .home_menu-burger {
     display: none;
   }
-  header nav {
+  .home_navbar {
     height: 90px;
   }
-  .d-logo{
+  .home_logo{
     padding-left:7%;
     padding-right:15%;
   }
-  .d-logo img {
+  .home_logo img {
     width: 68px;
     height: 60px;    
   }
-   .d-logo h2 {
+   .home_logo h2 {
     padding-left:8.3%;
     top: 53px;
   }
  
-   .menuUl {
+   .home_menuUl {
     flex-grow: 1.8;
     max-width:750px;
      display: flex;
@@ -200,14 +199,14 @@ header .linea {
     justify-content: space-around;
     position:relative;    
   }
-  .menuUl li {
+  .home_menuUl li {
     font-size: 13px;
   }
-  .menuUl li a {
+  .home_menuUl li a {
     text-transform: uppercase;
     color: var(--purpura);
   }
-   .menuUl li .linea-ul {
+   .home_menuUl li .linea-ul {
     display: none;
   }
   .liCrearGifos {
@@ -235,7 +234,7 @@ header .linea {
 
 
 
-.main-body {
+.home_main-body {
   background-color: var(--background_general);
   padding-top: 30px;
   text-align: center;
@@ -244,7 +243,7 @@ header .linea {
   flex-direction: column;
 }
 
-.main-body h1 {
+.home_title {
   margin: 2px 44px 27px 45px;
   letter-spacing: 0;
   font-family: "Montserrat", sans-serif;
@@ -255,17 +254,17 @@ header .linea {
   text-align: center;
 }
 
- .gifos {
+ .home_gifos {
   color: var(--turquesa);
 }
 
-.main-body img {
+.home_main-body img {
   width: 273px;
   height: 130px;
 
 }
 
-.main-body article h3 {
+.home_trendingTitle {
   letter-spacing: 0;
   font-family: "Montserrat", sans-serif;
   color: var(--purpura);
@@ -275,7 +274,7 @@ header .linea {
   margin: 31px 0 2px 0;
 }
 
-.main-body article ul {
+.home_main-body article ul {
   letter-spacing: 0;
   font-family: "Montserrat", sans-serif;
   color: var(--purpura);
@@ -289,14 +288,14 @@ header .linea {
   flex-wrap: wrap;
 }
 
-.main-body article ul li {
+.home_main-body article ul li {
   list-style: none;
   text-transform: capitalize;
   padding: 0.5em;
   cursor: pointer;
 }
 
-.d-busqueda {
+.home_busqueda {
   border: 1px solid var(--purpura);
   border-radius: 27px;
   width: 80%;  
@@ -306,10 +305,11 @@ header .linea {
   flex-direction: column;
 }
 
- .d-input {
+ .home_input {
   display: flex;
   width: 100%;
   align-items: center;
+  position: relative;
 }
 
 .img-lupa {
@@ -318,12 +318,12 @@ header .linea {
   margin-left: 10px;
 }
 
-.d-input button {
+.home_input button {
   border: none;
   background: none;
 }
 
- .d-input button .input_img {
+ .home_input button .input_img {
   width: 20px;
   height: 20px;
   cursor: pointer;
@@ -392,25 +392,21 @@ header .linea {
   height: 15.8px;  
 }
 
+
 @media (min-width: 769px) {
-  .main-body h1 {
+  .title {
     width: 50%;       
     font-size: 35px;
     line-height: 50px;
   }
-  .main-body img {
+  .home_main-body img {
     width: 399px;
     height: 190px;
   }
-  .main-body article h3 {
-    font-size: 18px;
-    margin: 73px 0 7px 0;
+  .home_trendingTitle {
+    font-size: 18px;   
   }
-  .main-body article p {
-    font-size: 16px;
-    padding-bottom: 95px;
-  }
-   .d-busqueda {
+   .home_busqueda {
     width: 38.3%;
   }
   .active-search{   
@@ -418,6 +414,94 @@ header .linea {
   }
 }
 
+
+/* *******  MAXIMIZE ********    */
+  
+.maximizado {
+  position: fixed;  
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--blanco);  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 5;  
+}
+
+.maximizado .close-button {
+  background: none;
+  position: absolute;
+  right: 9.8%;
+  top: 15%;
+  cursor: pointer;
+}
+
+.img-maximizado {
+  width: 84.8%;
+  height: 47.5%;
+  object-fit: cover;
+}
+
+.maximizado article {
+  margin-top: 2.9%;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  width: 84.8%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.maximizado article p {
+  margin-bottom: 0;
+}
+
+.maximizado article .titulo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.maximizado-buttons{
+  display: flex;  
+  flex-direction: row;
+  width:107px;
+  justify-content: space-between;
+}
+.max-button {  
+  border: none;  
+  width: 36px;
+  height: 36px;  
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+}
+.max-button-remove{  
+  width: 62px;
+  height: 36px;  
+  border-radius: 6px;
+  background: rgb(231, 4, 4);
+  color:white;
+  cursor: pointer;
+}
+.maximizado article button img {
+    object-fit: cover;
+}
+@media (min-width: 700px) {
+
+  .img-maximizado {
+    width: 58%;
+    height: 60%;    
+  }
+  .maximizado article {    
+    width: 55%;    
+  }
+  .maximizado .close-button {
+    right: 22%;
+    top: 9%;    
+  }
+}
 
 
 /* *******  FOOTER ********    */

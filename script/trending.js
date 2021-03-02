@@ -1,7 +1,7 @@
 
 //Slider Elements
-const btnleft = document.getElementById('btn-anterior')
-const btnright = document.getElementById('btn-siguiente')
+const btnleft = document.getElementById('btn-prev')
+const btnright = document.getElementById('btn-next')
 
 window.onload = function () {    
     loadTrending();        
@@ -13,7 +13,7 @@ window.onload = function () {
 async function loadTrending() {      
     let data =  await fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${APIkey}`)
     let gifsTrending = await data.json()    
-    let container = document.getElementById('contenedor-cards');       
+    let container = document.getElementById('contenedor-trending');       
     for (let i = 0; i < 25; i++) {
         let divtrending = document.createElement('div');
         let imggif = document.createElement('img');
@@ -25,7 +25,7 @@ async function loadTrending() {
                                         <button id="btn-favorito" class="opcion-button">
                                             <img src=${heartFav} id="img" alt="icono-favorito">
                                         </button>
-                                        <button id="btn-descargar" class="opcion-button" onclick= "downloadGif('${gifsTrending.data[i].images.original.url}','${gifsTrending.data[i].title}')">
+                                        <button id="btn-download" class="opcion-button" onclick= "downloadGif('${gifsTrending.data[i].images.original.url}','${gifsTrending.data[i].title}')">
                                             <img src="images/icon-download-hover.svg" alt="icono-descarga">
                                         </button>
                                         <button id="btn-max" class="opcion-button">
@@ -41,21 +41,19 @@ async function loadTrending() {
         divtrending.querySelector('#btn-favorito').addEventListener('click', () => {
             //to set and unset heart favorite css
             let heartImg=  divtrending.querySelector('#img')            
-            if (heartImg.getAttribute("src") == "./images/icon-fav-active.svg"){
+            if (isAfavoriteGif(gifsTrending.data[i].id)!=1){
              heartImg.src = "./images/icon-fav-hover.svg";              
             }
             else{heartImg.src = "./images/icon-fav-active.svg";}
             addFavorite(gifsTrending.data[i].id);
-            if(ccontainer_fav){ // if is in favorites section, load it                
+            if(container_fav){ // if is in favorites section, load it                
                 loadFavorites()                
             }
         });       
         divtrending.querySelector('#btn-max').addEventListener('click', () => {
             maximizeGif(gifsTrending.data[i].id);
-        });        
-        divtrending.addEventListener('touchstart', () => {
-            maximizeGif(gifsTrending.data[i].id);
-        })
+        });       
+      
         //to maximize on click when width <750
         divtrending.addEventListener('click', () => {
             if (maxWidth.matches){

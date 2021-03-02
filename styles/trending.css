@@ -1,0 +1,186 @@
+
+
+/* *******  TRENDING ********    */
+
+
+
+.trending {
+    background-color: var(--background_trending);
+    text-align: center;
+    color: var(--purpura);
+    padding-bottom: 22px;
+  }
+  
+  .btn-box {
+    display: none;
+  }
+  
+  .trending h2 {
+    letter-spacing: 0;
+    font-family: "Montserrat", sans-serif;
+    color: var(--purpura);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    padding-top: 46px;
+    margin-bottom: 7px;
+  }
+  
+  .trending-text {
+    letter-spacing: 0;
+    font-family: "Roboto", sans-serif;
+    color: var(--negro);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23px;
+    padding: 9px 100px;
+  }
+  
+  .contenedor-trending {
+    height: 187px;
+    display:flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin-left: 25px;
+    margin-right: 25px;
+  } 
+  
+   .card {
+    width: 200px;
+    height: 157px;
+    background: none;
+    margin-right: 22px;    
+    position:relative;
+  }
+  
+   .card-img{
+    position:relative;
+    width: 200px;
+    height: 157px;  
+    object-fit: cover;   
+  }
+  
+  .card-opciones {
+    display: none;
+    z-index: 1;
+  }
+  
+  @media (min-width: 750px) {
+    .trending p {
+      font-size: 18px;
+    }
+    .contenedor-trending {
+      height: 275px;
+      max-width: 850px;
+      scroll-behavior: smooth;
+    }
+    .card {
+      width: 267px;
+      height: 215px;
+      margin-right: 29px;
+    }
+     .card-opciones {
+      text-align: left;
+      display: none;
+      width: 267px;
+      height: 215px;
+      position: absolute;      
+    
+    }
+    .opciones-gif {   
+      display: flex;      
+      justify-content: flex-end;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+     .opcion-button {
+      width: 32px;
+      height: 32px;
+      opacity: 0.6;
+      background-color: white;
+      border-radius: 6px;
+      margin-left: 11px;
+      cursor:pointer;
+    }
+   
+    .opcion-button:hover {
+      opacity: 1;      
+    }
+    .trending-description {
+      position: absolute;
+      left: 18.5px;
+      bottom: 51px;
+    }
+     .description {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto", sans-serif;
+      color: white;
+    }
+     .userTrending {
+      font-size: 16px;
+    }
+     .tituloTrending {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .card:hover .card-opciones {
+      display: block;
+      background-color: rgba(114, 8, 252, 0.7);
+    } 
+  
+    .btn-box {         
+      cursor: pointer;      
+      display: block;
+      border: 1px solid var(--purpura);
+      color: var(--purpura);
+      background: var(--botones);      
+      font-size: 26px;
+      position: absolute;
+      width: 40px;
+      height: 40px;      
+      margin-top: 135px;     
+    }
+    .btn-box:hover {
+      border: 1px solid var(--barramenu);
+      color: var(--blanco);
+      background: var(--purpura);
+    }
+      
+     .prev {
+      left: 4.7%;
+    }
+    .next {
+      right: 4%;
+    }
+    .trending .contenedor-trending {     
+      align-items: center;    
+      display: flex;
+      margin: 2rem auto;
+      overflow: hidden;
+      position: relative;
+      width: 80%;
+    }
+
+     .card-img {
+      width: 267px;
+      height: 215px;   
+      object-fit: cover;      
+    }
+  }
+  @media (min-width: 1350px) {
+    .prev {
+      left: 15%;
+    }
+    .next {
+      right: 15%;
+    }
+  }
+
+
+
+/* *******  HIDDEN ********    */
+.hidden {
+  display: none;
+}

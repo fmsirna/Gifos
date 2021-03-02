@@ -8,28 +8,28 @@
     <link rel="icon" type="image/svg" href="./images/logo-desktop.svg" />  <!-- review-->
     <link rel="stylesheet" type="text/css" href="./styles/home.css">
     <link rel="stylesheet" type="text/css" href="./styles/favorites.css">
-    <link rel="stylesheet" type="text/css" href="./styles/search&trending.css">
+    <link rel="stylesheet" type="text/css" href="./styles/trending.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">  
 </head>
 
 <body>
     <header>
         <div class="linea"></div>
-        <nav id="navbar">
-            <a class="d-logo" href="index.html">
+        <nav id="navbar" class="home_navbar">
+            <a class="home_logo" href="index.html">
                 <img src="images/logo-desktop-modo-noc.svg" alt="Logo-GIFOS" id="logo" />
                 <h2>GIFOS</h2>
             </a>
-            <div class="menu">
-                <div id="menu-burguer" class="menu-burger">
-                    <span class="layer"></span>
-                    <span class="layer"></span>
-                    <span class="layer"></span>
+            <div class="home_menu">
+                <div id="menu-burguer" class="home_menu-burger">
+                    <span class="home_layer"></span>
+                    <span class="home_layer"></span>
+                    <span class="home_layer"></span>
                 </div>
                       
             </div>
-            <ul id="ul-menu" class="menuUl">
-                <li class='firstli' id="liModoMocturno"><a>Modo <span id="sp-tema">nocturno</span></a>
+            <ul id="ul-menu" class="home_menuUl">
+                <li class='home_darkMode' id="liModoMocturno"><a>Modo <span id="sp-tema">nocturno</span></a>
                         <p class="linea-ul"></p>
                     </li>
                 <li><a href="favorites.html">Favoritos</a>
@@ -60,10 +60,9 @@
         <section class="trending">
             <h2>Trending GIFOS</h2>
             <p class="trending-text">Mira los últimos GIFOS de nuestra comunidad.</p>
-            <button class="btn-box anterior" id="btn-anterior"><</button>
-            <button class="btn-box siguiente" id="btn-siguiente">></button>
-            <div id="contenedor-trending" class="contenedor-trending">
-                <div id="contenedor-cards" class="contenedor-cards">
+            <button class="btn-box prev" id="btn-prev"><</button>
+            <button class="btn-box next" id="btn-next">></button>
+            <div id="contenedor-trending" class="contenedor-trending">                
                 </div>
             </div>
         </section>

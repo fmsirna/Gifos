@@ -61,7 +61,8 @@ lupa_busqueda.addEventListener('click', () => {
     ActiveSearch()
     restoreValues() 
     param_busqueda = input_search.value
-    searchLoad(param_busqueda,offset);    
+    searchLoad(param_busqueda,offset); 
+    location.href= '#home_search'    
 });
 
 //Press Enter key to Search
@@ -70,7 +71,8 @@ input_search.addEventListener('keyup', (e) => {
         ActiveSearch()
         restoreValues() 
         param_busqueda = input_search.value
-        searchLoad(param_busqueda,offset);               
+        searchLoad(param_busqueda,offset);   
+        location.href= '#home_search'            
     }
 });
 // to search by trending topic
@@ -80,6 +82,7 @@ lista_trending.addEventListener('click', (e) => {
     param_busqueda = e.target.textContent;    
     searchLoad(param_busqueda, offset);
     input_search.value=`${param_busqueda}`
+    location.href= '#home_search' 
 })
 //click on SEE MORE
 btn_vermas.addEventListener('click', () => { 
@@ -139,7 +142,7 @@ async function searchLoad(parametro,offset) {
                                         <button id="btn-favorito" class="opcion-button">
                                             <img src=${heartFav} id="img" alt="icono-busqueda">
                                         </button>
-                                        <button id="btn-descargar" class="opcion-button" >
+                                        <button id="btn-download" class="opcion-button" >
                                             <img src="images/icon-download.svg" alt="icono-busqueda">
                                         </button>
                                         <button id="btn-max" class="opcion-button">
@@ -152,7 +155,7 @@ async function searchLoad(parametro,offset) {
                                     </div>                                    
                                 </div>`;
             // Button events
-           div.querySelector('#btn-descargar').addEventListener('click', () => {
+           div.querySelector('#btn-download').addEventListener('click', () => {
                 downloadGif(array.data[i].images.original.url,array.data[i].title);
             });
             div.querySelector('#btn-max').addEventListener('click', () => {
@@ -170,7 +173,7 @@ async function searchLoad(parametro,offset) {
             div.querySelector('#btn-favorito').addEventListener('click', () => {
             //to set and unset heart favorite css
             let heartImg=  div.querySelector('#img')            
-            if (heartImg.getAttribute("src") == "./images/icon-fav-active.svg"){
+            if (isAfavoriteGif(gifsTrending.data[i].id)!=1){
              heartImg.src = "./images/icon-fav-hover.svg";              
             }
             else{heartImg.src = "./images/icon-fav-active.svg";}
@@ -181,7 +184,7 @@ async function searchLoad(parametro,offset) {
             });    
             img.srcset = `${array.data[i].images.downsized_large.url}`;
             img.alt = `${array.data[i].id}`;
-            img.classList.add('card-img');
+            img.classList.add('card-img-search');
             div.appendChild(img);
             resultados.appendChild(div);
             resultados.classList.remove('hidden');

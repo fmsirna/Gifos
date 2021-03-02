@@ -1,14 +1,10 @@
-
-/* *******  FAVORITES ********    */
-
-.favorites {
+.myGifs_list{
     padding-top: 15px;
     background-color: var(--background_general);
     text-align: center;
     min-height: 260px;
-  }
-  
-  .favorites h2 {    
+}
+.myGifs_list h2 {    
     font-family: "Montserrat", sans-serif;
     color: var(--purpura);
     font-size: 25px;
@@ -16,12 +12,12 @@
     padding: 7px 0 26px 0;
   }
   
-  .non-favorites img {
+  .myGifs_empty img {
     height: 100px;
     width: 100px;
   }
   
-   .non-favorites h3 {
+   .myGifs_empty h3 {
     letter-spacing: 0;
     font-family: "Montserrat", sans-serif;
     color: var(--turquesa);
@@ -31,11 +27,11 @@
     margin: auto;
     padding-bottom: 100px;
   }
-  .container-fav{
+  .myGifs_container{
       display: flex;
       justify-content: center;
   }
-   .favorites-gifs {
+   .myGifs_gifs {
     display: flex;    
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -43,35 +39,35 @@
     padding-bottom: 25px;   
   }
   
-  .card-fav {
+  .myGif_card {
     width:132px;
     height:120px;
     margin: 5px 3px 5px 3px;
   }
   
-  .card-fav img {
+  .myGif_card img {
     height: 100%;
     width: 100%;
     object-fit: cover;   
   }
-  .card-options-fav{    
+  .myGif_card-options{    
     display: none;    
   }
 
 
   @media (min-width: 750px) {
-  .favorites-gifs {
+  .myGifs_gifs{
     display: flex;    
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 70vw;       
     max-width: 750px;
     }
-  .card-fav {
+  .myGif_card {
     width:170px;
     height:130px;   
   }
-  .card-options-fav{
+  .myGif_card-options{
     width:170px;
     height:130px;  
     text-align: left;
@@ -85,13 +81,9 @@
     position: absolute;
     right: 10px;
     top: 10px;
-  }
-  .option-button-close{
-    width:18px !important;
-    height:18px !important;
-  } 
+  }  
   
-  .card-fav:hover .card-options-fav {
+  .myGif_card:hover .myGif_card-options {
     display: block;
     background-color: rgba(114, 8, 252, 0.7);
   }

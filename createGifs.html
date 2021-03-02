@@ -12,23 +12,23 @@
 </head>
 
 <body>
-    <header>
+       <header>
         <div class="linea"></div>
-        <nav id="navbar">
-            <a class="d-logo" href="index.html">
+        <nav id="navbar" class="home_navbar">
+            <a class="home_logo" href="index.html">
                 <img src="images/logo-desktop-modo-noc.svg" alt="Logo-GIFOS" id="logo" />
                 <h2>GIFOS</h2>
             </a>
-            <div class="menu">
-                <div id="menu-burguer" class="menu-burger">
-                    <span class="layer"></span>
-                    <span class="layer"></span>
-                    <span class="layer"></span>
+            <div class="home_menu">
+                <div id="menu-burguer" class="home_menu-burger">
+                    <span class="home_layer"></span>
+                    <span class="home_layer"></span>
+                    <span class="home_layer"></span>
                 </div>
                       
             </div>
-            <ul id="ul-menu" class="menuUl">
-                <li class='firstli' id="liModoMocturno"><a>Modo <span id="sp-tema">nocturno</span></a>
+            <ul id="ul-menu" class="home_menuUl">
+                <li class='home_darkMode' id="liModoMocturno"><a>Modo <span id="sp-tema">nocturno</span></a>
                         <p class="linea-ul"></p>
                     </li>
                 <li><a href="favorites.html">Favoritos</a>
@@ -63,7 +63,20 @@
                             <p>Crea tu GIFO en sólo 3 pasos! <br>(sólo necesitas una cámara para grabar un video)</p>
                         </div>
                         <video></video>
-                    
+                        <img src="" alt="" id="gif-recorded" class="gif-recorded" hidden>
+                        <div id="div-uploadedGif" class=" hidden" >
+                            <div id="options-uploadedGif" class=" hidden" >
+                                <button id="btn-download">
+                                    <img src="images/icon-download.svg" alt="descargar gifo">
+                                </button>
+                                <button id="btn-link">
+                                    <img src="images/icon-link-normal.svg" alt="copiar enlace">
+                                </button>
+                            </div>
+                            <img src="images/loader.svg" alt="icono cargando gifo" class="img-loader"
+                                id="img-uploadedGif">
+                            <p class="text-uploadedGif" id="text-uploadedGif">Estamos subiendo tu GIFO </p>
+                        </div>
                     </div>
                     <div class="div-opcgenerales">
                         <div class="div-steps">
@@ -72,8 +85,8 @@
                             <div class="step">3</div>
                         </div>
                         <div class="div-opcgrabacion">
-                            <p id="contador-grabacion" hidden></p>
-                            <button id="btn-repetir" hidden>REPETIR CAPTURA</button>
+                            <p id="counter-recording" hidden></p>
+                            <button id="btn-repeat" hidden>REPETIR CAPTURA</button>
                         </div>
                     </div>
                 </div>
@@ -81,12 +94,12 @@
                     <img src="images/pelicula.svg" alt="Imagen-película" />
                 </div>
             </article>
-            <article class="div-lineaseparador"></article>
+            <article class="div-line"></article>
             <article class="div-botones">
-                <button id="btn-comenzar">COMENZAR</button>
-                <button id="btn-grabar" hidden>GRABAR</button>
-                <button id="btn-finalizar" hidden>FINALIZAR</button>
-                <button id="btn-subir" hidden>SUBIR GIFO</button>
+                <button id="btn-begin">COMENZAR</button>
+                <button id="btn-record" hidden>GRABAR</button>
+                <button id="btn-stop" hidden>FINALIZAR</button>
+                <button id="btn-upload" hidden>SUBIR GIFO</button>
             </article>
         </section>
 
@@ -102,7 +115,8 @@
             <h6>© GIFOS 2021 All Rights Reserved.</h6>
         </div>
         <div class="linea"></div>
-    </footer>   
+    </footer>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>   
     <script src="script/global.js"></script>
     <script src="script/createGif.js"></script>
 </body>
