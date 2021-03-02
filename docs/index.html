@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFOS</title>
+    <link rel="icon" type="image/svg" href="./images/logo-desktop.svg" />  
+    <link rel="stylesheet" type="text/css" href="./styles/home.css">
+    <link rel="stylesheet" type="text/css" href="./styles/search.css">
+    <link rel="stylesheet" type="text/css" href="./styles/trending.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">   
+  
+</head>
+
+<body>
+    <header>
+        <div class="linea"></div>
+        <nav id="navbar" class="home_navbar">
+            <a class="home_logo" href="index.html">
+                <img src="images/logo-desktop-modo-noc.svg" alt="Logo-GIFOS" id="logo" />
+                <h2>GIFOS</h2>
+            </a>
+            <div class="home_menu">
+                <div id="menu-burguer" class="home_menu-burger">
+                    <span class="home_layer"></span>
+                    <span class="home_layer"></span>
+                    <span class="home_layer"></span>
+                </div>
+                      
+            </div>
+            <ul id="ul-menu" class="home_menuUl">
+                <li class='home_darkMode' id="liModoMocturno"><a>Modo <span id="sp-tema">nocturno</span></a>
+                        <p class="linea-ul"></p>
+                    </li>
+                <li><a href="favorites.html">Favoritos</a>
+                    <p class="linea-ul"></p>
+                </li>
+                <li><a href="myGifs.html">Mis GIFOS</a>
+                    <p class="linea-ul"></p>
+                </li>
+                <li class="liCrearGifos">
+                    <a href="createGifs.html"><img src="images/button-crear-gifo.svg" alt="Icon-Favoritos" /></a>
+                </li>
+            </ul>         
+        </nav>
+    </header>
+    <main>
+        <section class="home_main-body">
+            <h1 class="home_title" >Inspírate, busca, guarda, y crea los mejores <span class="home_gifos">GIFOS</span></h1>
+            <img src="./images/ilustra_header.svg" alt="Banner-main-body-GIFOS" class="logo" />
+            <div id='home_search' class="home_busqueda">
+                <div class="home_input">
+                    <img id="img-lupa" src="images/icon-search-mod-noc.svg" alt="icono-busqueda" class="hidden">
+                    <input id="in-busqueda" type="text" placeholder="Busca GIFOS y más">
+                    <button id="btn-buscar"><img src="images/icon-search.svg" class="input_img" id="lupa-busqueda"
+                            alt="icono-busqueda"></button>
+                    <button id="btn-buscar"><img src="images/close.svg" class="input_img hidden" id="cerrar-busqueda"
+                            alt="icono-busqueda"></button>                    
+                </div>
+                <ul id="lista-autocomplete" class="hidden"></ul>
+            </div>
+            <article>
+                <h3 class="home_trendingTitle">Trending:</h3>
+                <ul id="lista-trending" class="lista-trending">
+                    <li>Reactions</li>
+                    <li>Entertainment</li>
+                    <li>Sports</li>
+                    <li>Stickers</li>
+                </ul>
+            </article>
+        </section>
+        <section class="resultados">
+            <div class="linea"></div>
+            <h2 id="titulo-resultados" class="hidden">Resultados</h2>
+            <div class='container-search'>
+                <div id="resultados-gifs" class="resultados-gifs hidden"></div>
+            </div>
+            <button id="btn-vermas" class="hidden">VER MAS</button>
+        </section>
+        <section class="trending">
+            <h2>Trending GIFOS</h2>
+            <p class="trending-text">Mira los últimos GIFOS de nuestra comunidad.</p>            
+            <button class="btn-box prev" id="btn-prev"><</button>
+            <button class="btn-box next" id="btn-next">></button>
+            <div id="contenedor-trending" class="contenedor-trending">
+                
+                </div>
+            </div>
+        </section>
+        <section id="gif-max" class="maximizado hidden">
+        </section>
+    </main>
+    <footer class="d-footer">
+        <p>Compartir en:</p>
+        <div class="space">
+            <div class="container-icons">
+                <a target="_blank" href="http://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                <a target="_blank" href="http://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                <a target="_blank" href="http://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            </div>
+            <h6>© GIFOS 2021 All Rights Reserved.</h6>
+        </div>
+        <div class="linea"></div>
+    </footer>   
+    <script src="script/global.js"></script>
+    <script src="script/search.js"></script>
+    <script src="script/trending.js"></script>
+</body>
+
+</html>

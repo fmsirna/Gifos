@@ -173,12 +173,12 @@ async function searchLoad(parametro,offset) {
             div.querySelector('#btn-favorito').addEventListener('click', () => {
             //to set and unset heart favorite css
             let heartImg=  div.querySelector('#img')            
-            if (isAfavoriteGif(gifsTrending.data[i].id)!=1){
+            if (isAfavoriteGif(array.data[i].id)!=1){
              heartImg.src = "./images/icon-fav-hover.svg";              
             }
             else{heartImg.src = "./images/icon-fav-active.svg";}
             addFavorite(array.data[i].id);
-            if(ccontainer_fav){ // if is in favorites section, load it                
+            if(container_fav){ // if is in favorites section, load it                
                 loadFavorites()                
             }
             });    
