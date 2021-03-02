@@ -342,6 +342,7 @@ header .linea {
   font-size: 15px;
   height: 50px;
   padding-left: 1em;  
+  color: var(--purpura);
 }
 
  #in-busqueda:focus {
