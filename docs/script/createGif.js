@@ -32,6 +32,8 @@ btn_upload.addEventListener("click", uploadGif);
 
 /*_____________________FUNCIONES GRABACIÓN_____________________*/
 function visual() {
+    div_descripcion.classList.add('div-descripcion')
+    div_descripcion.classList.remove('hidden')
     div_descripcion.innerHTML = "<h2>¿Nos das acceso </br> a tu cámara?</h2><p>El acceso a tu camara será válido sólo por el tiempo en el que estés creando el GIFO.</p>";
     steps[0].classList.add('stepActive');
 }
@@ -53,7 +55,8 @@ function videoAccess() {
                },
               });
             btn_record.hidden = false;
-
+            div_descripcion.classList.add('hidden')
+            div_descripcion.classList.remove('div-descripcion')
         }).catch(function (error) {
             alert('Debes permitir el acceso a tu cámara para continuar');
             console.error(error);
