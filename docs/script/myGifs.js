@@ -34,7 +34,7 @@ async function loadMyGifs() {
                     removeMyGif(gifs.data[i].id)                   
                 });
                 div.querySelector('#myGif_btn-download').addEventListener('click', () => {
-                    downloadGif(gifs.data[i].images.original.url);
+                    downloadGif(gifs.data[i].images.original.url,'My Gif');
                 });
                 div.querySelector('#myGif_btn-max').addEventListener('click', () => {
                     maximizeGifMyGifs(gifs.data[i].id);

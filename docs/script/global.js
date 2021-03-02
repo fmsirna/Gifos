@@ -164,7 +164,7 @@ async function maximizeGif(idGif) {
             }      
         });
         contenedor_maximizado.querySelector('#btnmax-download').addEventListener('click', () => {
-            downloadGif(gif.data.images.original.url);
+            downloadGif(gif.data.images.original.url,gif.data.title);
         });
         contenedor_maximizado.querySelector('#btnmax-close').addEventListener('click', () => {
             contenedor_maximizado.style.display = 'none';
@@ -208,7 +208,7 @@ async function maximizeGifMyGifs(idGif) {
             contenedor_maximizado.style.display = 'none';       
         });
         contenedor_maximizado.querySelector('#btnmax-download').addEventListener('click', () => {
-            downloadGif(gif.data.images.original.url);
+            downloadGif(gif.data.images.original.url,'My Gif');
         });
         contenedor_maximizado.querySelector('#btnmax-close').addEventListener('click', () => {
             contenedor_maximizado.style.display = 'none';
