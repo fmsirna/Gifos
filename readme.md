@@ -1,4 +1,4 @@
-# Web App "GifOS"
+# Web App "GIFOS"
 
 Segundo proyecto entregado de la carrera de Desarrollo Web Full Stack de Acámica. se conecta con la API de [Giphy](https://developers.giphy.com/) para buscar y crear gifs. tiene funcionalidades para agregar a favoritos, cambiar a modo-oscuro y muchas otras cosas.
 
