@@ -160,10 +160,7 @@ async function searchLoad(parametro,offset) {
             });
             div.querySelector('#btn-max').addEventListener('click', () => {
                 maximizeGif(array.data[i].id);
-            });
-            div.addEventListener('touchstart', () => {
-                maximizeGif(array.data[i].id);
-            })           
+            });       
             //to maximize on click when width <750
             div.addEventListener('click', () => {
                 if (maxWidth.matches){
