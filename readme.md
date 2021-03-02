@@ -11,6 +11,7 @@ Pueden probarlo en el siguiente link: https://fmsirna.github.io/Gifos/ o ejecuta
 - Promises, Async functions, Fetchs
 - Local Storage
 - Timers
+- POO
 - FontAwesome
 - Google Fonts
 - [RecordRTC](https://recordrtc.org/) para obtener realizar las funcionalidades de crear Gifs con la camara
